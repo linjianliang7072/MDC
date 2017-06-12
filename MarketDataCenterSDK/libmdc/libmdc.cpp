@@ -1,4 +1,4 @@
-// libmdc.cpp : ©w¸q DLL À³¥Îµ{¦¡ªº¶×¥X¨ç¦¡¡C
+ï»¿// libmdc.cpp : å®šç¾© DLL æ‡‰ç”¨ç¨‹å¼çš„åŒ¯å‡ºå‡½å¼ã€‚
 //
 
 #include "stdafx.h"
@@ -20,7 +20,7 @@ bool is_inited = false;
 std::string agent_port = "tcp://*:8888";
 
 //-----------------------------------------------------------------------------------
-//  ¸U°ê½XÂà¦h¦r¤¸½X
+//  è¬åœ‹ç¢¼è½‰å¤šå­—å…ƒç¢¼
 //-----------------------------------------------------------------------------------
 #ifdef _STATIC
 void UnicodeToAnsi(TCHAR *unicode, char* ansi)
@@ -33,7 +33,7 @@ void __stdcall UnicodeToAnsi(TCHAR *unicode, char* ansi)
 }
 
 //-----------------------------------------------------------------------------------
-//  ¦h¦r¤¸½XÂà¸U°ê½X
+//  å¤šå­—å…ƒç¢¼è½‰è¬åœ‹ç¢¼
 //-----------------------------------------------------------------------------------
 #ifdef _STATIC
 void AnsiToUnicode(char* ansi, TCHAR* unicode)
@@ -46,7 +46,7 @@ void __stdcall AnsiToUnicode(char* ansi, TCHAR* unicode)
 }
 
 //---------------------------------------------------------------------------
-//  «Ø¥ß¤é»x¸ê®Æ§¨
+//  å»ºç«‹æ—¥èªŒè³‡æ–™å¤¾
 //---------------------------------------------------------------------------
 void CreateLogFolder()
 {
@@ -64,7 +64,7 @@ void CreateLogFolder()
 //---------------------------------------------------------------------------
 //
 //---------------------------------------------------------------------------
-//  ¿é¥X¤é»x¨ç¼Æ
+//  è¼¸å‡ºæ—¥èªŒå‡½æ•¸
 //---------------------------------------------------------------------------
 #ifdef _STATIC
 void WriteLog(TCHAR* sFormat, ...)
@@ -83,7 +83,7 @@ void __stdcall WriteLog(TCHAR* sFormat, ...)
 
 	CString sPath;
 
-	//	¨Ì¤é´Á³]©wÀÉ¦W
+	//	ä¾æ—¥æœŸè¨­å®šæª”å
 	if (g_LogDate != CTime::GetCurrentTime().GetDay())
 	{
 		CreateLogFolder();
@@ -110,12 +110,12 @@ void __stdcall WriteLog(TCHAR* sFormat, ...)
 	TCHAR			sBuffer[1024];
 	va_list			pArgList;
 
-	//	¨ú¥X®æ¦¡¤Æ¦r¦ê
+	//	å–å‡ºæ ¼å¼åŒ–å­—ä¸²
 	va_start(pArgList, sFormat);
 	_vsnwprintf(sBuffer, sizeof(sBuffer) / sizeof(TCHAR), sFormat, pArgList);
 	va_end(pArgList);
 
-	//	¼g¤JÀÉ®×
+	//	å¯«å…¥æª”æ¡ˆ
 	SYSTEMTIME		t;
 	GetSystemTime(&t);
 	sTemp.Format(_T("[%02d:%02d:%02d.%03d] %s .\n"), tNow.GetHour(), tNow.GetMinute(), tNow.GetSecond(), t.wMilliseconds, sBuffer);
@@ -128,7 +128,7 @@ void __stdcall WriteLog(TCHAR* sFormat, ...)
 //---------------------------------------------------------------------------
 //
 //---------------------------------------------------------------------------
-//  ¿é¥X¤é»x¨ç¼Æ
+//  è¼¸å‡ºæ—¥èªŒå‡½æ•¸
 //---------------------------------------------------------------------------
 #ifdef _STATIC
 void WriteLog(TCHAR* mevent, TCHAR* msg)
@@ -143,7 +143,7 @@ void __stdcall WriteLog(TCHAR* mevent, TCHAR* msg)
 //---------------------------------------------------------------------------
 //
 //---------------------------------------------------------------------------
-//  ®æ¦¡¤Æ¤é»x
+//  æ ¼å¼åŒ–æ—¥èªŒ
 //---------------------------------------------------------------------------
 void VWriteLog(TCHAR* sFormat, ...)
 {
@@ -158,7 +158,7 @@ void VWriteLog(TCHAR* sFormat, ...)
 
 	CString sPath;
 
-	//	¨Ì¤é´Á³]©wÀÉ¦W
+	//	ä¾æ—¥æœŸè¨­å®šæª”å
 	if (g_LogDate != CTime::GetCurrentTime().GetDay())
 	{
 		CreateLogFolder();
@@ -185,12 +185,12 @@ void VWriteLog(TCHAR* sFormat, ...)
 	TCHAR			sBuffer[1024];
 	va_list			pArgList;
 
-	//	¨ú¥X®æ¦¡¤Æ¦r¦ê
+	//	å–å‡ºæ ¼å¼åŒ–å­—ä¸²
 	va_start(pArgList, sFormat);
 	_vsnwprintf(sBuffer, sizeof(sBuffer) / sizeof(TCHAR), sFormat, pArgList);
 	va_end(pArgList);
 
-	//	¼g¤JÀÉ®×
+	//	å¯«å…¥æª”æ¡ˆ
 	SYSTEMTIME		t;
 	GetSystemTime(&t);
 	sTemp.Format(_T("[%02d:%02d:%02d.%03d] %s .\n"), tNow.GetHour(), tNow.GetMinute(), tNow.GetSecond(), t.wMilliseconds, sBuffer);
@@ -198,7 +198,7 @@ void VWriteLog(TCHAR* sFormat, ...)
 	_ftprintf(pFile, sTemp);
 	fclose(pFile);
 
-	//	½Æ»s¿ù»~°T®§
+	//	è¤‡è£½éŒ¯èª¤è¨Šæ¯
 	_tcsncpy(g_VMsg, sBuffer, sizeof(g_VMsg) / sizeof(TCHAR));
 	ReleaseMutex(g_hLogex);
 }
@@ -206,7 +206,7 @@ void VWriteLog(TCHAR* sFormat, ...)
 //---------------------------------------------------------------------------
 //
 //---------------------------------------------------------------------------
-//  ©T©w¤Æ¤é»x
+//  å›ºå®šåŒ–æ—¥èªŒ
 //---------------------------------------------------------------------------
 void VWriteLog(TCHAR* mevent, CString msg)
 {
@@ -216,7 +216,7 @@ void VWriteLog(TCHAR* mevent, CString msg)
 //-----------------------------------------------------------------------------------
 //
 //-----------------------------------------------------------------------------------
-//  ¿é¥X¤é»x¨ç¼Æ
+//  è¼¸å‡ºæ—¥èªŒå‡½æ•¸
 //-----------------------------------------------------------------------------------
 void VWriteLog(TCHAR* mevent, int num)
 {
