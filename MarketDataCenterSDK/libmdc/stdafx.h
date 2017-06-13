@@ -1,6 +1,6 @@
-// stdafx.h : ¥i¦b¦¹¼ĞÀYÀÉ¤¤¥]§t¼Ğ·Çªº¨t²Î Include ÀÉ¡A
-// ©Î¬O¸g±`¨Ï¥Î«o«Ü¤ÖÅÜ§óªº
-// ±M®×±M¥Î Include ÀÉ®×
+ï»¿// stdafx.h : å¯åœ¨æ­¤æ¨™é ­æª”ä¸­åŒ…å«æ¨™æº–çš„ç³»çµ± Include æª”ï¼Œ
+// æˆ–æ˜¯ç¶“å¸¸ä½¿ç”¨å»å¾ˆå°‘è®Šæ›´çš„
+// å°ˆæ¡ˆå°ˆç”¨ Include æª”æ¡ˆ
 //
 
 #pragma once
@@ -9,7 +9,7 @@
 
 #include "targetver.h"
 
-// Windows ¼ĞÀYÀÉ: 
+// Windows æ¨™é ­æª”: 
 #include <afx.h>
 #include <windows.h>
 #include <stdio.h>
@@ -20,7 +20,7 @@
 #include <iostream>
 
 
-// TODO:  ¦b¦¹°Ñ¦Ò±zªºµ{¦¡©Ò»İ­nªº¨ä¥L¼ĞÀY
+// TODO:  åœ¨æ­¤åƒè€ƒæ‚¨çš„ç¨‹å¼æ‰€éœ€è¦çš„å…¶ä»–æ¨™é ­
 
 #include "zmq.hpp"
 #include "unistd.h"

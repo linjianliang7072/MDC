@@ -1,4 +1,4 @@
-LIBRARY "libmdc"
+﻿LIBRARY "libmdc"
 EXPORTS
 	mdc_set_agent_addr @1
 	mdc_init @2

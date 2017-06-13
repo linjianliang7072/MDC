@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketDataCenterSDK", "MarketDataCenterSDK\MarketDataCenterSDK.csproj", "{75F1902C-AF5A-462F-B197-E8F21635A438}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDKDemo", "SDKDemo\SDKDemo.csproj", "{8601FAE3-5714-4647-9847-6CD7C3C3669B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmdc", "libmdc\libmdc.vcxproj", "{C69DB9C0-98C7-4D42-9BC5-3DA883278B08}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProcessTest", "ProcessTest\ProcessTest.vcxproj", "{0E2936E9-D38A-48E3-AF0A-B84B2720116E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,16 @@ Global
 		{C69DB9C0-98C7-4D42-9BC5-3DA883278B08}.Release|x64.Build.0 = Release|x64
 		{C69DB9C0-98C7-4D42-9BC5-3DA883278B08}.Release|x86.ActiveCfg = Release|Win32
 		{C69DB9C0-98C7-4D42-9BC5-3DA883278B08}.Release|x86.Build.0 = Release|Win32
+		{0E2936E9-D38A-48E3-AF0A-B84B2720116E}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{0E2936E9-D38A-48E3-AF0A-B84B2720116E}.Debug|x64.ActiveCfg = Debug|x64
+		{0E2936E9-D38A-48E3-AF0A-B84B2720116E}.Debug|x64.Build.0 = Debug|x64
+		{0E2936E9-D38A-48E3-AF0A-B84B2720116E}.Debug|x86.ActiveCfg = Debug|Win32
+		{0E2936E9-D38A-48E3-AF0A-B84B2720116E}.Debug|x86.Build.0 = Debug|Win32
+		{0E2936E9-D38A-48E3-AF0A-B84B2720116E}.Release|Any CPU.ActiveCfg = Release|Win32
+		{0E2936E9-D38A-48E3-AF0A-B84B2720116E}.Release|x64.ActiveCfg = Release|x64
+		{0E2936E9-D38A-48E3-AF0A-B84B2720116E}.Release|x64.Build.0 = Release|x64
+		{0E2936E9-D38A-48E3-AF0A-B84B2720116E}.Release|x86.ActiveCfg = Release|Win32
+		{0E2936E9-D38A-48E3-AF0A-B84B2720116E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
